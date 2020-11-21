@@ -112,7 +112,7 @@
 	  <ul class="sidebar-menu">
 		<li class="header">MAIN NAVIGATION</li>
 		<li class="treeview">
-		  <a href="#">
+		  <a href="{{ route('home') }} ">
 			<i class="fa fa-dashboard"></i> <span>Dashboard</span>
 			<span class="pull-right-container">
 			  <i class=" pull-right"></i>
@@ -128,7 +128,7 @@
 			</span>
 		  </a>
 		  <ul class="treeview-menu">
-			<li><a href="#"><i class="fa fa-circle-o"></i> Users </a></li>
+			<li><a href=" {{ route('data.users') }} "><i class="fa fa-circle-o"></i> Users </a></li>
 
 			{{-- <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li> --}}
 		  </ul>

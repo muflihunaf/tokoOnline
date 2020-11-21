@@ -14,14 +14,12 @@
 Route::get('/', function () {
     return view('auth.login');
 })->middleware('guest');
-Route::get('adminlte', function(){
-    return view('template/app');
-});
-
-Route::get('dashboard', function(){
-    return view('admin.dashboard');
-});
 
 Auth::routes(['register' => false]);
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('users','Web\UsersController@index')->name('data.users');
+});
+
+
