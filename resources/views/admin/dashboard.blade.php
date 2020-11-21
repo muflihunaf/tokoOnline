@@ -1,5 +1,7 @@
 @extends('template.app')
-
+@section('title')
+    Dashboard
+@endsection
 @section('content')
 <!-- Default box -->
 <div class="box">
