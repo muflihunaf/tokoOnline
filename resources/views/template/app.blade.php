@@ -14,16 +14,11 @@
   <link rel="stylesheet" href="{{URL::asset('/fonts/ionicons.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{URL::asset('/dist/css/AdminLTE.min.css')}}">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-	   folder instead of downloading all of them to reduce the load. -->
+
   <link rel="stylesheet" href="{{URL::asset('/dist/css/skins/_all-skins.min.css')}}">
+  {{--Custom Css  --}}
   @stack('customCss')
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
 <!-- Site wrapper -->
@@ -31,7 +26,7 @@
 
   <header class="main-header">
 	<!-- Logo -->
-	<a href="index2.html" class="logo">
+	<a href="{{ route('home') }} " class="logo">
 	  <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <span class="logo-mini"><b>TKO</b></span>
 	  <!-- logo for regular state and mobile devices -->
@@ -69,9 +64,6 @@
 
 			  <!-- Menu Footer-->
 			  <li class="user-footer">
-				{{-- <div class="pull-left">
-				  <a href="#" class="btn btn-default btn-flat">Profile</a>
-				</div> --}}
 				<div class="pull-right">
 
                 <a class="btn btn-default" href="{{ route('logout') }}"
@@ -128,7 +120,7 @@
 			</span>
 		  </a>
 		  <ul class="treeview-menu">
-			<li><a href=" {{ route('data.users') }} "><i class="fa fa-circle-o"></i> Users </a></li>
+			<li><a href=" {{ route('data.users') }} "><i class="fa fa-users"></i> Users </a></li>
 
 			{{-- <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li> --}}
 		  </ul>
