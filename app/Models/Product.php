@@ -8,7 +8,7 @@ class Product extends Model
 {
     protected $table = 'products';
 
-    protected $guarded = 'id';
+    protected $guarded = ['id'];
 
     public function imageRelation()
     {
