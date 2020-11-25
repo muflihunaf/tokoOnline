@@ -10,8 +10,14 @@ class Product extends Model
 
     protected $guarded = ['id'];
 
+    public function latestImage()
+    {
+        return $this->hasOne('App\Models\ImagesProduct' ,'product_id');
+    }
+
     public function imageRelation()
     {
-        $this->hasMany('App\Models\ImagesProduct','product_id','id');
+        return $this->hasMany('App\Models\ImagesProduct','product_id','id');
     }
+
 }
